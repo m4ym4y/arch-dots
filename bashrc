@@ -15,6 +15,9 @@ if [[ $- != *i* ]] ; then
 fi
 
 # Put your fun stuff here.
+export PS1="\[\e[32m\]$\[\e[m\] "
+set -o emacs
+
 export PATH="${PATH}:$HOME/bin/"
 
 export PATH="${PATH}:$HOME/go/bin/"

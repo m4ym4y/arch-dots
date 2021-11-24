@@ -25,6 +25,7 @@ ln -sf "`pwd`/dots.sh" $HOME/bin/dots.sh
 if [ ! -d "$HOME/bin/color-scripts" ]; then
   echo "Color scripts do not exist; installing..."
   git clone https://github.com/stark/color-scripts ~/bin/color-scripts
+  chmod +x ~/bin/color-scripts/color-scripts/*
 fi
 
 # kitty colors
