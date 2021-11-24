@@ -1,0 +1,28 @@
+[click-8ball]
+command=echo " `/home/maya/go/bin/8ball` "
+interval=60
+background=#2e78c1
+color=#dad9df
+separator=false
+
+[click-gears]
+full_text=" gears "
+command=i3-msg -q exec glxgears 
+interval=0
+background=#2e78c1
+color=#dad9df
+separator=false
+
+[simple]
+command=echo " `date` "
+interval=1
+background=#edb7ab
+color=#282f32
+separator=false
+
+[simple]
+command=echo " ~ maya ~ "
+interval=once
+background=#edb7ab
+color=#282f32
+separator=false
