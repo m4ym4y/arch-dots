@@ -97,7 +97,7 @@ endif
 call plug#begin("~/.local/share/nvim/plugged")
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'sheerun/vim-polyglot'
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'

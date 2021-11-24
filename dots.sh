@@ -18,6 +18,7 @@ cp ./fonts/* ~/.local/share/fonts
 # scripts
 echo "Installing scripts..."
 cp ./bin/* ~/bin
+chmod +x ~/bin/*
 ln -sf "`pwd`/dots.sh" $HOME/bin/dots.sh
 
 # colorscripts
