@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep_pid = 0
+sleep_pid=0
 
 rerun() {
   if [ "$sleep_pid" -ne 0 ]; then

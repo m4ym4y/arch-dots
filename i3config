@@ -46,6 +46,9 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+c kill
 
+# lock screen
+bindsym $mod+BackSpace exec --no-startup-id /home/maya/bin/blurlock.sh
+
 # start dmenu (a program launcher)
 # bindsym $mod+p exec --no-startup-id dmenu_run
 bindsym $mod+p exec --no-startup-id "dmenu_run -nf '#FFFFFF' -nb '#282F32' -sb '#EDB7AB' -sf '#282F32' -fn 'monospace-10' -p 'dmenu prompt &gt;'" 
@@ -210,3 +213,5 @@ client.placeholder      #282F32 #282F32 #fff #e9e2cd   #e9e2cd
 
 exec_always --no-startup-id /usr/bin/feh --bg-tile ~/pics/wallpaper/ice_cream_tile.png
 exec_always --no-startup-id ~/bin/polybar_launch
+# so far I cannot tell a difference with or without compton
+# exec_always --no-startup-id killall compton && compton --vsync opengl-swc --backend glx --glx-no-stencil --refresh-rate=144
