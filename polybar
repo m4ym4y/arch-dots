@@ -38,7 +38,7 @@ font-1 = NotoEmoji:scale=10;2
 ; font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-right = 8ball hourglass10 filesystem alsa memory cpu datefacts date
+modules-right = ffplaying 8ball hrttime hourglass10 filesystem alsa memory cpu datefacts date
 
 separator = ">"
 
@@ -68,6 +68,13 @@ format-prefix="🎱 "
 label=%output%
 click-left=kill -USR1 %pid%
 
+[module/hrttime]
+type=custom/script
+exec=~/go/bin/timesince 2021-10-13
+interval=30
+format-prefix="💊 "
+label=%output%
+
 [module/hourglass10]
 type=custom/script
 exec=~/go/bin/polybar-hourglass 10
@@ -82,6 +89,13 @@ exec=~/go/bin/datefacts month-day
 interval=30
 format-prefix="🗓️ "
 label=%output%
+
+[module/ffplaying]
+type=custom/script
+exec=~/go/bin/status-server 9000 30
+tail=true
+format-prefix="🎵 "
+label="%output%"
 
 [module/filesystem]
 type = internal/fs
