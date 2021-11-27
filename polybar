@@ -38,7 +38,7 @@ font-1 = NotoEmoji:scale=10;2
 ; font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-right = ffplaying 8ball hrttime hourglass10 filesystem alsa memory cpu datefacts date
+modules-right = 8ball ffplaying d20 hrttime hourglass10 filesystem alsa memory cpu datefacts date
 
 separator = ">"
 
@@ -68,6 +68,14 @@ format-prefix="🎱 "
 label=%output%
 click-left=kill -USR1 %pid%
 
+[module/d20]
+type=custom/script
+exec=~/bin/d20_polybar.sh 120
+tail=true
+format-prefix="🎲 "
+label=%output:3%
+click-left=kill -USR1 %pid%
+
 [module/hrttime]
 type=custom/script
 exec=~/go/bin/timesince 2021-10-13
@@ -80,7 +88,7 @@ type=custom/script
 exec=~/go/bin/polybar-hourglass 10
 tail=true
 format-prefix="⌛ "
-label=%output%
+label=%output:5%
 click-left=kill -USR1 %pid%
 
 [module/datefacts]
@@ -95,7 +103,7 @@ type=custom/script
 exec=~/go/bin/status-server 9000 30
 tail=true
 format-prefix="🎵 "
-label="%output%"
+label="%output:30%"
 click-left=kill -USR1 %pid%
 
 [module/filesystem]
