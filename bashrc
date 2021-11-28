@@ -32,5 +32,6 @@ alias ls="ls --color=auto"
 
 alias gadd="git add"
 alias gst="git status"
+alias glog="git --no-pager log --pretty=oneline"
 
 npm config set prefix $HOME/npm
