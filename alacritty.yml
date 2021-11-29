@@ -20,3 +20,6 @@ key_bindings:
   - { key: Minus, mods: Control, action: None }
   - { key: NumpadAdd, mods: Control, action: None }
   - { key: NumpadSubtract, mods: Control, action: None }
+
+env:
+  WINIT_X11_SCALE_FACTOR: "1"
