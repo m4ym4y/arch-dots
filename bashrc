@@ -19,6 +19,7 @@ export PS1="\[\e[32m\]$\[\e[m\] "
 set -o emacs
 
 export PATH="${PATH}:$HOME/bin/"
+export PATH="${PATH}:$HOME/.local/bin/"
 
 export PATH="${PATH}:$HOME/go/bin/"
 export PATH="${PATH}:$HOME/npm/bin/"

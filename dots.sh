@@ -8,6 +8,7 @@ echo "Running in '`pwd`'..."
 # mkdirs
 echo "Initializing directories"
 mkdir -p ~/.config/{i3,kitty,'gtk-3.0',i3blocks,nvim,polybar,alacritty}
+mkdir -p ~/.config/coc/ultisnips
 mkdir -p ~/{bin,go,npm}
 mkdir -p ~/pics/scrot ~/pics/wallpaper
 mkdir -p ~/.local/share/fonts
@@ -47,6 +48,7 @@ echo "Copying desktop files..."
 cp ./bashrc ~/.bashrc
 cp ./i3config ~/.config/i3/config
 cp ./init.vim ~/.config/nvim/init.vim
+cp ./snippets/* ~/.config/coc/ultisnips
 cp ./i3blocks ~/.config/i3blocks/config
 cp ./kitty.conf ~/.config/kitty/kitty.conf
 cp ./gtksettings.ini ~/.config/gtk-3.0/settings.ini

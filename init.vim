@@ -29,8 +29,8 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 1
 
 " editing vimrc
-nnoremap <leader>ve :split ~/Documents/dotfiles/home/vimrc<cr>
-nnoremap <leader>vs :!dot<cr><cr>:source $MYVIMRC<cr>
+nnoremap <leader>ve :split ~/dots/init.vim<cr>
+nnoremap <leader>vs :!bash ~/dots/dots.sh<cr><cr>:source ~/dots/init.vim<cr>
 
 " normal bindings
 noremap <c-u> viwU
@@ -77,6 +77,7 @@ autocmd FileType {tex,plaintex} nnoremap <buffer> <localleader>r :!pdflatex %<es
 autocmd BufNewFile,Bufread *.exs set syntax=elixir
 autocmd BufNewFile,Bufread *.ex set syntax=elixir
 autocmd BufNewFile,Bufread *.ts set syntax=typescript
+autocmd BufNewFile,Bufread *.tsx set syntax=typescript
 autocmd BufNewFile,Bufread *.tf set syntax=terraform
 autocmd BufNewFile,Bufread *.pug set syntax=pug
 autocmd BufNewFile,Bufread *.graphql set syntax=graphql
