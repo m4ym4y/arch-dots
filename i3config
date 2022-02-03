@@ -58,6 +58,9 @@ bindsym $mod+p exec --no-startup-id "dmenu_run -nf '#FFFFFF' -nb '#282F32' -sb '
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+# fix the alacritty font size
+bindsym $mod+Shift+a exec --no-startup-id "bash ~/bin/change_alacritty.sh" 
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down

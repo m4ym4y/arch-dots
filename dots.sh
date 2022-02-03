@@ -2,7 +2,7 @@
 set -e
 
 # go to dotfile dir
-cd `dirname $0`
+cd ~/dots
 echo "Running in '`pwd`'..."
 
 # mkdirs
