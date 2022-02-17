@@ -9,7 +9,7 @@ echo "Running in '`pwd`'..."
 echo "Initializing directories"
 mkdir -p ~/.config/{i3,kitty,'gtk-3.0',i3blocks,nvim,polybar,alacritty}
 mkdir -p ~/.config/coc/ultisnips
-mkdir -p ~/{bin,go,npm}
+mkdir -p ~/{bin,go,npm,.ssh}
 mkdir -p ~/pics/scrot ~/pics/wallpaper
 mkdir -p ~/.local/share/fonts
 
@@ -54,6 +54,7 @@ cp ./kitty.conf ~/.config/kitty/kitty.conf
 cp ./gtksettings.ini ~/.config/gtk-3.0/settings.ini
 cp ./polybar ~/.config/polybar/config
 cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
+cp ./sshconfig ~/.ssh/config
 
 # alacritty theme
 echo "Generating alacritty theme from ${KITTY_THEME}"
