@@ -55,6 +55,7 @@ cp ./gtksettings.ini ~/.config/gtk-3.0/settings.ini
 cp ./polybar ~/.config/polybar/config
 cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
 cp ./sshconfig ~/.ssh/config
+cp ./gitconfig ~/.gitconfig
 
 # alacritty theme
 echo "Generating alacritty theme from ${KITTY_THEME}"
