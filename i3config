@@ -12,7 +12,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:GohuFont 10
+font pango:GohuFont 9.5
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -51,7 +51,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id /home/maya/bin/blurlock.sh
 
 # start dmenu (a program launcher)
 # bindsym $mod+p exec --no-startup-id dmenu_run
-bindsym $mod+p exec --no-startup-id "dmenu_run -nf '#FFFFFF' -nb '#282F32' -sb '#EDB7AB' -sf '#282F32' -fn 'monospace-10' -p 'dmenu prompt &gt;'" 
+bindsym $mod+p exec --no-startup-id "dmenu_run -nf '#FFFFFF' -nb '#282F32' -sb '#EDB7AB' -sf '#282F32' -fn 'GohuFont-9.5' -p 'dmenu prompt &gt;'" 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -59,7 +59,8 @@ bindsym $mod+p exec --no-startup-id "dmenu_run -nf '#FFFFFF' -nb '#282F32' -sb '
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # fix the alacritty font size
-bindsym $mod+Shift+a exec --no-startup-id "bash ~/bin/change_alacritty.sh" 
+# tentatively this might be fixed by setting size to 9.5??
+# bindsym $mod+Shift+a exec --no-startup-id "bash ~/bin/change_alacritty.sh" 
 
 # change focus
 bindsym $mod+h focus left

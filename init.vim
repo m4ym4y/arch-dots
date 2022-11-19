@@ -12,7 +12,7 @@ set softtabstop=2
 set sw=2
 set shiftround
 " No mouse
-" set mouse=a
+set mouse=
 
 set encoding=utf-8
 set fileencoding=utf-8

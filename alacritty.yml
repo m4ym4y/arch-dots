@@ -3,7 +3,7 @@ window:
     x: 15
     y: 15
 font:
-  size: 9.0
+  size: 9.5
   normal:
     family: GohuFont
     style: Regular
