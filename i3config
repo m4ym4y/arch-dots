@@ -60,7 +60,7 @@ bindsym $mod+p exec --no-startup-id "dmenu_run -nf '#FFFFFF' -nb '#282F32' -sb '
 
 # fix the alacritty font size
 # tentatively this might be fixed by setting size to 9.5??
-# bindsym $mod+Shift+a exec --no-startup-id "bash ~/bin/change_alacritty.sh" 
+# bindsym $mod+Shift+a exec --no-startup-id "bash ~/bin/change_alacritty.sh"
 
 # change focus
 bindsym $mod+h focus left
