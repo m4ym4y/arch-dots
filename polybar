@@ -205,7 +205,7 @@ type = internal/date
 interval = 1
 
 date = " %Y-%m-%d"
-time = %H:%M:%S
+time = "%I:%M:%S%P"
 
 format-prefix = ⏰
 format-prefix-foreground = ${colors.foreground-alt}
