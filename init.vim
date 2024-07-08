@@ -103,6 +103,7 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'rking/ag.vim'
+Plug 'tssm/fairyfloss.vim'
 " Plug 'luochen1990/rainbow'
 " Plug 'guns/vim-sexp'
 " Plug 'tpope/vim-sexp-mappings-for-regular-people'
@@ -116,13 +117,14 @@ nnoremap <leader>a :Ag<space>
 
 " display
 syntax on
-" set termguicolors
-" colorscheme base16-default-dark
+set termguicolors
+colorscheme fairyfloss
 " set background=light
 set number
 set ruler
 set guicursor=
 set laststatus=0
+hi Normal guibg=NONE ctermbg=NONE
 
 " No autoindent, dammit
 set nocindent

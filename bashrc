@@ -21,6 +21,7 @@ set -o emacs
 export PATH="${PATH}:$HOME/bin/"
 export PATH="${PATH}:$HOME/.local/bin/"
 
+export PATH="${PATH}:$HOME/.cargo/bin/"
 export PATH="${PATH}:$HOME/go/bin/"
 export PATH="${PATH}:$HOME/npm/bin/"
 export PATH="${PATH}:/usr/local/go/bin/"
