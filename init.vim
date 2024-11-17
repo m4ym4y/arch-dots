@@ -103,7 +103,8 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'rking/ag.vim'
-Plug 'tssm/fairyfloss.vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'luochen1990/rainbow'
 " Plug 'guns/vim-sexp'
 " Plug 'tpope/vim-sexp-mappings-for-regular-people'
@@ -118,7 +119,12 @@ nnoremap <leader>a :Ag<space>
 " display
 syntax on
 set termguicolors
-colorscheme fairyfloss
+let ayucolor="light"
+colorscheme ayu
+
+" colorizer
+lua require'colorizer'.setup()
+
 " set background=light
 set number
 set ruler

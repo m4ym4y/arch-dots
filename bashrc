@@ -38,4 +38,6 @@ alias gadd="git add"
 alias gst="git status"
 alias glog="git --no-pager log --pretty=oneline"
 
+alias ac="arduino-cli"
+
 npm config set prefix $HOME/npm

@@ -8,6 +8,7 @@ echo "Running in '`pwd`'..."
 # mkdirs
 echo "Initializing directories"
 mkdir -p ~/.config/{i3,kitty,'gtk-3.0',i3blocks,nvim,polybar,alacritty}
+mkdir -p ~/.config/alacritty/themes
 mkdir -p ~/.config/coc/ultisnips
 mkdir -p ~/{bin,go,npm,.ssh}
 mkdir -p ~/pics/scrot ~/pics/wallpaper
@@ -29,20 +30,6 @@ if [ ! -d "$HOME/bin/color-scripts" ]; then
   chmod +x ~/bin/color-scripts/color-scripts/*
 fi
 
-# kitty colors
-if [ ! -d "$HOME/.config/kitty/kitty-themes" ]; then
-  echo "Kitty themes do not exist; installing..."
-  git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
-fi
-
-KITTY_THEME="Fideloper"
-echo "Setting kitty & alacritty theme to '${KITTY_THEME}'"
-rm -f ~/.config/kitty/theme.conf
-ln -s $HOME/.config/kitty/kitty-themes/themes/$KITTY_THEME.conf $HOME/.config/kitty/theme.conf
-
-echo "Generating Xresources from ${KITTY_THEME}"
-cat ~/.config/kitty/theme.conf | sed -e 's/^/\*/' -e 's/ /:/' > ~/.Xresources
-
 # desktop files
 echo "Copying desktop files..."
 cp ./bashrc ~/.bashrc
@@ -53,13 +40,7 @@ cp ./i3blocks ~/.config/i3blocks/config
 cp ./kitty.conf ~/.config/kitty/kitty.conf
 cp ./gtksettings.ini ~/.config/gtk-3.0/settings.ini
 cp ./polybar ~/.config/polybar/config
-cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
+cp -r ./alacritty-theme/* ~/.config/alacritty/themes
+cp ./alacritty.toml ~/.config/alacritty/alacritty.toml
 cp ./sshconfig ~/.ssh/config
 cp ./gitconfig ~/.gitconfig
-
-# alacritty theme
-echo "Generating alacritty theme from ${KITTY_THEME}"
-kitty-to-alacritty ~/.config/kitty/theme.conf >> ~/.config/alacritty/alacritty.yml
-
-echo "Restarting i3..."
-i3-msg restart
