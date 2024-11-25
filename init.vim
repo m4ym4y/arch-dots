@@ -81,6 +81,8 @@ autocmd BufNewFile,Bufread *.tsx set syntax=typescript
 autocmd BufNewFile,Bufread *.tf set syntax=terraform
 autocmd BufNewFile,Bufread *.pug set syntax=pug
 autocmd BufNewFile,Bufread *.graphql set syntax=graphql
+" (close enough)
+autocmd BufNewFile,Bufread *.gdshader set syntax=glsl
 
 " netrw
 autocmd FileType netrw setl bufhidden=delete
@@ -105,6 +107,9 @@ Plug 'tpope/vim-surround'
 Plug 'rking/ag.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'quabug/vim-gdscript'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'robitx/gp.nvim'
 " Plug 'luochen1990/rainbow'
 " Plug 'guns/vim-sexp'
 " Plug 'tpope/vim-sexp-mappings-for-regular-people'
@@ -112,6 +117,20 @@ call plug#end()
 
 " ag
 nnoremap <leader>a :Ag<space>
+
+" gp config
+lua <<EOF
+local conf = {
+  openai_api_key = { "bash", "-c", "cat ~/.openai_api_key.txt" },
+}
+require("gp").setup(conf)
+EOF
+
+" gpt open chat
+nnoremap <leader><C-g> :GpChatToggle split<CR>
+nnoremap <leader>g :GpAppend<space>
+nnoremap <leader>G :GpRewrite<space>
+vnoremap <leader>G :GpRewrite<space>
 
 " airline
 " let g:airline_theme='solarized'
