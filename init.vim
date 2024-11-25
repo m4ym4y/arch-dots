@@ -129,8 +129,9 @@ EOF
 " gpt open chat
 nnoremap <leader><C-g> :GpChatToggle split<CR>
 nnoremap <leader>g :GpAppend<space>
-nnoremap <leader>G :GpRewrite<space>
+vnoremap <leader><C-g> :GpRewrite<space>
 vnoremap <leader>G :GpRewrite<space>
+nnoremap <leader>G :GpRewrite<space>
 
 " airline
 " let g:airline_theme='solarized'
