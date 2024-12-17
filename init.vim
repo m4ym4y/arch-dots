@@ -84,6 +84,9 @@ autocmd BufNewFile,Bufread *.graphql set syntax=graphql
 " (close enough)
 autocmd BufNewFile,Bufread *.gdshader set syntax=glsl
 
+" godot
+autocmd FileType {gdscript,gdshader} set expandtab
+
 " netrw
 autocmd FileType netrw setl bufhidden=delete
 

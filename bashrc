@@ -27,7 +27,7 @@ export PATH="${PATH}:$HOME/npm/bin/"
 export PATH="${PATH}:/usr/local/go/bin/"
 export GOPATH="$HOME/go"
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 alias scrot="scrot '%Y-%m-%d-%m-%s_\$wx\$h.png' -e 'mv \$f ~/pics/scrot/'"
 alias vi="nvim"
