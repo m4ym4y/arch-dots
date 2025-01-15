@@ -109,6 +109,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'rking/ag.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'quabug/vim-gdscript'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -142,7 +143,7 @@ nnoremap <leader>g :GpAppend<space>
 syntax on
 set termguicolors
 let ayucolor="light"
-colorscheme ayu
+colorscheme catppuccin
 
 " colorizer
 lua require'colorizer'.setup()

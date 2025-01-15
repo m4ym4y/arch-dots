@@ -3,7 +3,7 @@ shell = "/bin/bash"
 
 [general]
 import = [
-  "~/.config/alacritty/themes/themes/ayu_light.toml"
+  "~/.config/alacritty/themes/themes/catppuccin_latte.toml"
 ]
 
 [window]
