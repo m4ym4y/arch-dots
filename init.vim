@@ -80,6 +80,7 @@ autocmd BufNewFile,Bufread *.ts set syntax=typescript
 autocmd BufNewFile,Bufread *.tsx set syntax=typescript
 autocmd BufNewFile,Bufread *.tf set syntax=terraform
 autocmd BufNewFile,Bufread *.pug set syntax=pug
+autocmd BufNewFile,Bufread *.njk set syntax=html
 autocmd BufNewFile,Bufread *.graphql set syntax=graphql
 " (close enough)
 autocmd BufNewFile,Bufread *.gdshader set syntax=glsl

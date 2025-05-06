@@ -33,6 +33,7 @@ fi
 # desktop files
 echo "Copying desktop files..."
 cp ./bashrc ~/.bashrc
+cp ./xinitrc ~/.xinitrc
 cp ./i3config ~/.config/i3/config
 cp ./init.vim ~/.config/nvim/init.vim
 cp ./snippets/* ~/.config/coc/ultisnips
